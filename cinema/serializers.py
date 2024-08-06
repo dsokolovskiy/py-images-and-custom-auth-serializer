@@ -34,7 +34,6 @@ class MovieSerializer(serializers.ModelSerializer):
     class Meta:
         model = Movie
         fields = (
-
             "id",
             "title",
             "description",
@@ -62,7 +61,6 @@ class MovieDetailSerializer(MovieSerializer):
     class Meta:
         model = Movie
         fields = (
-
             "id",
             "title",
             "description",
@@ -93,7 +91,6 @@ class MovieSessionListSerializer(MovieSessionSerializer):
     class Meta:
         model = MovieSession
         fields = (
-
             "id",
             "show_time",
             "movie_title",
@@ -104,7 +101,6 @@ class MovieSessionListSerializer(MovieSessionSerializer):
         )
 
 
-# noinspection PyArgumentList
 class TicketSerializer(serializers.ModelSerializer):
     def validate(self, attrs):
         data = super(TicketSerializer, self).validate(attrs=attrs)
